@@ -14,10 +14,15 @@ download and enjoy!
 
 ```
 drag & drop your .txt containing links into the program.  # even a single one works fine.
-
 Press Enter. # Starts the Scraping & Parsing process.
 When finished just copy the path give in by the program.
 ```
+
+## Examples
+
+![Main Screen](https://i.imgur.com/IQSmjIf.jpg)
+![Second Screen](https://i.imgur.com/NWTlmkx.jpg)
+![Third Screen](https://i.imgur.com/dCU9Z0R.jpeg)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
