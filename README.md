@@ -17,6 +17,12 @@ drag & drop your .txt containing links into the program.  # even a single one wo
 Press Enter. # Starts the Scraping & Parsing process.
 When finished just copy the path give in by the program.
 ```
+## Tools used: 
+
+- for the regex: https://stackoverflow.com/questions/6038061/regular-expression-to-find-urls-within-a-string
+- to test the regex: https://www.regextester.com/
+- for the colored console: http://colorfulconsole.com/
+- icon: https://www.iconarchive.com/show/swarm-icons-by-sonya/Space-Shuttle-icon.html
 
 ## Examples
 
