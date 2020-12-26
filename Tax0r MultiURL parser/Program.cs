@@ -68,6 +68,9 @@ namespace Tax0r_MultiURL_parser
             Console.WriteLine("[Information]: Distinct URL's found: " + distinctUrls.Count(), Color.LightPink);
 
             helperClass.saveToFile(distinctUrls.ToArray(), distinctUrls.Count());
+           
+            Console.WriteLine("\npress any key to exit the process...");
+            Console.ReadKey();
         }
     }
 }
