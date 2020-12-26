@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Tax0r_MultiURL_parser</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Classes\FileHelperClass.cs~RF5d2660d.TMP" />
+    <None Remove="Program.cs~RF5a3aba6.TMP" />
+    <None Remove="Program.cs~RF5deb1d1.TMP" />
+    <None Remove="urlParser.cs~RF5a5c426.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Colorful.Console" Version="1.2.15" />
+  </ItemGroup>
+
+</Project>

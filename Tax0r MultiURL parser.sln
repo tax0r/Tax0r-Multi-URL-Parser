@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tax0r MultiURL parser", "Tax0r MultiURL parser\Tax0r MultiURL parser.csproj", "{A8C282DD-1CDE-462B-AE7E-7729779289F3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8C282DD-1CDE-462B-AE7E-7729779289F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C282DD-1CDE-462B-AE7E-7729779289F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C282DD-1CDE-462B-AE7E-7729779289F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C282DD-1CDE-462B-AE7E-7729779289F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {465B3155-EE03-4132-8F8D-FD2AB1A781A8}
+	EndGlobalSection
+EndGlobal
