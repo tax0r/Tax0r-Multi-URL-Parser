@@ -21,6 +21,7 @@ namespace Tax0r_MultiURL_parser
             Thread.Sleep(TimeSpan.FromSeconds(2));
 
             Console.Clear();
+            Console.WriteLine("[Important!]: PRESS ESC TO INTERRUPT AND FINISH INSTANTLY.", Color.LightBlue);
             Console.WriteLine("[Important!]: Please drag&drop you'r URL-list into the Application.", Color.Pink);
 
             string toReplace = '"'.ToString();
@@ -33,7 +34,7 @@ namespace Tax0r_MultiURL_parser
             
             foreach (string url in urls)
             {
-                if(!url.EndsWith(".png") && !url.EndsWith(".jpg") && !url.EndsWith(".pdf") && !url.EndsWith(".css") && !url.EndsWith(".svg") && !url.EndsWith(".ttf"))
+                if (!url.EndsWith(".png") && !url.EndsWith(".jpg") && !url.EndsWith(".pdf") && !url.EndsWith(".css") && !url.EndsWith(".svg") && !url.EndsWith(".ttf"))
                 {
                     try
                     {
@@ -53,6 +54,11 @@ namespace Tax0r_MultiURL_parser
                     {
                         Console.WriteLine("[BAD URL]: " + url, Color.Red);
                     }
+
+                    if (Console.ReadKey(true).Key == ConsoleKey.Escape)
+                    {
+                        goto Finished;
+                    }
                 }
                 else
                 {
@@ -60,6 +66,7 @@ namespace Tax0r_MultiURL_parser
                 }
             }
 
+        Finished:
             List<string> distinctUrls = scrapedUrls.Distinct().ToList();
 
             Console.Clear();
