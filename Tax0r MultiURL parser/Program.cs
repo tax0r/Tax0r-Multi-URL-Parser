@@ -15,13 +15,46 @@ namespace Tax0r_MultiURL_parser
         {
             UrlParserClass parserClass = new UrlParserClass();
             FileHelperClass helperClass = new FileHelperClass();
+            FilterHelperClass filterHelper = new FilterHelperClass();
+
+            filterHelper.addFilters("yahoo.com");
+            filterHelper.addFilters("google.com");
+            filterHelper.addFilters("bing.com");
+            filterHelper.addFilters("bingj.com");
+            filterHelper.addFilters("live.com");
+            filterHelper.addFilters("w3.org");
+            filterHelper.addFilters("microsofttranslator.com");
+            filterHelper.addFilters("wikipedia.org");
+            filterHelper.addFilters("twitter.com");
+            filterHelper.addFilters("youtube.com");
+            filterHelper.addFilters("facebook.com");
+            filterHelper.addFilters("instagram.com");
+            filterHelper.addFilters("microsoft.com");
+            filterHelper.addFilters("giga.de");
+            filterHelper.addFilters("msn.com");
+            filterHelper.addFilters("outlook.com");
+            filterHelper.addFilters("creativecommons.org");
+            filterHelper.addFilters("trustscam.nl");
+            filterHelper.addFilters("aol.de");
+            filterHelper.addFilters("yandex.com");
+            filterHelper.addFilters("verbraucherschutz.de");
+            filterHelper.addFilters("whois.com");
+            filterHelper.addFilters("bingparachute.com");
+            filterHelper.addFilters("duckduckgo.com");
+            filterHelper.addFilters(".js");
+            filterHelper.addFilters(".png");
+            filterHelper.addFilters(".jpg");
+            filterHelper.addFilters(".ttf");
+            filterHelper.addFilters(".pdf");
+            filterHelper.addFilters(".css");
+            filterHelper.addFilters(".svg");
+            filterHelper.addFilters(".sh");
 
             Console.WriteAscii("TAX0R, 2020", Color.LightPink);
 
             Thread.Sleep(TimeSpan.FromSeconds(2));
 
             Console.Clear();
-            Console.WriteLine("[Important!]: PRESS ESC TO INTERRUPT AND FINISH INSTANTLY.", Color.LightBlue);
             Console.WriteLine("[Important!]: Please drag&drop you'r URL-list into the Application.", Color.Pink);
 
             string toReplace = '"'.ToString();
@@ -34,7 +67,7 @@ namespace Tax0r_MultiURL_parser
             
             foreach (string url in urls)
             {
-                if (!url.EndsWith(".png") && !url.EndsWith(".jpg") && !url.EndsWith(".pdf") && !url.EndsWith(".css") && !url.EndsWith(".svg") && !url.EndsWith(".ttf"))
+                if (filterHelper.isFiltered(url))
                 {
                     try
                     {
@@ -46,18 +79,16 @@ namespace Tax0r_MultiURL_parser
 
                         foreach (string foundUrl in foundUrls)
                         {
-                            Console.WriteLine("[NEW URL]: " + foundUrl, Color.LightGreen);
-                            scrapedUrls.Add(foundUrl);
+                            if (filterHelper.isFiltered(foundUrl))
+                            {
+                                Console.WriteLine("[NEW URL]: " + foundUrl, Color.LightGreen);
+                                scrapedUrls.Add(foundUrl);
+                            }
                         }
                     }
                     catch (Exception e)
                     {
                         Console.WriteLine("[BAD URL]: " + url, Color.Red);
-                    }
-
-                    if (Console.ReadKey(true).Key == ConsoleKey.Escape)
-                    {
-                        goto Finished;
                     }
                 }
                 else
@@ -66,7 +97,6 @@ namespace Tax0r_MultiURL_parser
                 }
             }
 
-        Finished:
             List<string> distinctUrls = scrapedUrls.Distinct().ToList();
 
             Console.Clear();
